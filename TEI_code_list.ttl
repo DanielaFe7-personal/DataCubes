@@ -1,0 +1,278 @@
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sett-code: <http://setts.org/code#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+
+sett-code:AWEIsh a skos:Concept ;
+    rdfs:comment "The AWEIsh index belongs to the Landsat IndiceS (LIS) indices. LIS is part of the Traces Environmental Indices (TEI) proposed by the Traces project team."@en ;
+    skos:inScheme sett-code:TEI-CL ;
+    skos:notation "AWEIsh"@en ;
+    skos:prefLabel "Automated Water Extraction Index with Shadows Elimination"@en .
+
+sett-code:EBBI a skos:Concept ;
+    rdfs:comment "The EBBI index belongs to the Landsat IndiceS (LIS) indices. LIS is part of the Traces Environmental Indices (TEI) proposed by the Traces project team."@en ;
+    skos:inScheme sett-code:TEI-CL ;
+    skos:notation "EBBI"@en ;
+    skos:prefLabel "Enhanced Built-Up and Bareness Index"@en .
+
+sett-code:LSWI a skos:Concept ;
+    rdfs:comment "The LSWI index belongs to the Landsat IndiceS (LIS) indices. LIS is part of the Traces Environmental Indices (TEI) proposed by the Traces project team."@en ;
+    skos:inScheme sett-code:TEI-CL ;
+    skos:notation "LSWI"@en ;
+    skos:prefLabel "Land Surface Water Index"@en .
+
+sett-code:MBI a skos:Concept ;
+    rdfs:comment "The MBI index belongs to the Landsat IndiceS (LIS) indices. LIS is part of the Traces Environmental Indices (TEI) proposed by the Traces project team."@en ;
+    skos:inScheme sett-code:TEI-CL ;
+    skos:notation "MBI"@en ;
+    skos:prefLabel "Modified Bare Soil Index"@en .
+
+sett-code:MSAVI a skos:Concept ;
+    rdfs:comment "The MSAVI index belongs to the Landsat IndiceS (LIS) indices. LIS is part of the Traces Environmental Indices (TEI) proposed by the Traces project team."@en ;
+    skos:inScheme sett-code:TEI-CL ;
+    skos:notation "MSAVI"@en ;
+    skos:prefLabel "Modified Soil-Adjusted Vegetation Index"@en .
+
+sett-code:NBSIMS a skos:Concept ;
+    rdfs:comment "The NBSIMS index belongs to the Landsat IndiceS (LIS) indices. LIS is part of the Traces Environmental Indices (TEI) proposed by the Traces project team."@en ;
+    skos:inScheme sett-code:TEI-CL ;
+    skos:notation "NBSIMS"@en ;
+    skos:prefLabel "Non-Binary Snow Index for Multi-Component Surfaces"@en .
+
+sett-code:NDBI a skos:Concept ;
+    rdfs:comment "The NDBI index belongs to the Landsat IndiceS (LIS) indices. LIS is part of the Traces Environmental Indices (TEI) proposed by the Traces project team."@en ;
+    skos:inScheme sett-code:TEI-CL ;
+    skos:notation "NDBI"@en ;
+    skos:prefLabel "Normalized Difference Built-Up Index"@en .
+
+sett-code:NDGlaI a skos:Concept ;
+    rdfs:comment "The NDGlaI index belongs to the Landsat IndiceS (LIS) indices. LIS is part of the Traces Environmental Indices (TEI) proposed by the Traces project team."@en ;
+    skos:inScheme sett-code:TEI-CL ;
+    skos:notation "NDGlaI"@en ;
+    skos:prefLabel "Normalized Difference Glacier Index"@en .
+
+sett-code:NDISIb a skos:Concept ;
+    rdfs:comment "The NDISIb index belongs to the Landsat IndiceS (LIS) indices. LIS is part of the Traces Environmental Indices (TEI) proposed by the Traces project team."@en ;
+    skos:inScheme sett-code:TEI-CL ;
+    skos:notation "NDISIb"@en ;
+    skos:prefLabel "Normalized Difference Impervious Surface Index Blue"@en .
+
+sett-code:NDSI a skos:Concept ;
+    rdfs:comment "The NDSI index belongs to the Landsat IndiceS (LIS) indices. LIS is part of the Traces Environmental Indices (TEI) proposed by the Traces project team."@en ;
+    skos:inScheme sett-code:TEI-CL ;
+    skos:notation "NDSI"@en ;
+    skos:prefLabel "Normalized Difference Snow Index"@en .
+
+sett-code:NDVI a skos:Concept ;
+    rdfs:comment "The NDVI index belongs to the Landsat IndiceS (LIS) indices. LIS is part of the Traces Environmental Indices (TEI) proposed by the Traces project team."@en ;
+    skos:inScheme sett-code:TEI-CL ;
+    skos:notation "NDVI"@en ;
+    skos:prefLabel "Normalized Difference Vegetation Index"@en .
+
+sett-code:NDWI a skos:Concept ;
+    rdfs:comment "The NDWI index belongs to the Landsat IndiceS (LIS) indices. LIS is part of the Traces Environmental Indices (TEI) proposed by the Traces project team."@en ;
+    skos:inScheme sett-code:TEI-CL ;
+    skos:notation "NDWI"@en ;
+    skos:prefLabel "Normalized Difference Water Index"@en .
+
+sett-code:NWI a skos:Concept ;
+    rdfs:comment "The NWI index belongs to the Landsat IndiceS (LIS) indices. LIS is part of the Traces Environmental Indices (TEI) proposed by the Traces project team."@en ;
+    skos:inScheme sett-code:TEI-CL ;
+    skos:notation "NWI"@en ;
+    skos:prefLabel "New Water Index"@en .
+
+sett-code:SWI a skos:Concept ;
+    rdfs:comment "The SWI index belongs to the Landsat IndiceS (LIS) indices. LIS is part of the Traces Environmental Indices (TEI) proposed by the Traces project team."@en ;
+    skos:inScheme sett-code:TEI-CL ;
+    skos:notation "SWI"@en ;
+    skos:prefLabel "Snow Water Index"@en .
+
+sett-code:TCB a skos:Concept ;
+    rdfs:comment "The TCB index belongs to the Landsat IndiceS (LIS) indices. LIS is part of the Traces Environmental Indices (TEI) proposed by the Traces project team."@en ;
+    skos:inScheme sett-code:TEI-CL ;
+    skos:notation "TCB"@en ;
+    skos:prefLabel "Tasseled Cap Brigthness"@en .
+
+sett-code:TCG a skos:Concept ;
+    rdfs:comment "The TCG index belongs to the Landsat IndiceS (LIS) indices. LIS is part of the Traces Environmental Indices (TEI) proposed by the Traces project team."@en ;
+    skos:inScheme sett-code:TEI-CL ;
+    skos:notation "TCG"@en ;
+    skos:prefLabel "Tasseled Cap Greenness"@en .
+
+sett-code:TCW a skos:Concept ;
+    rdfs:comment "The TCW index belongs to the Landsat IndiceS (LIS) indices. LIS is part of the Traces Environmental Indices (TEI) proposed by the Traces project team."@en ;
+    skos:inScheme sett-code:TEI-CL ;
+    skos:notation "TCW"@en ;
+    skos:prefLabel "Tasseled Cap Wetness"@en .
+
+sett-code:VARI a skos:Concept ;
+    rdfs:comment "The VARI index belongs to the Landsat IndiceS (LIS) indices. LIS is part of the Traces Environmental Indices (TEI) proposed by the Traces project team."@en ;
+    skos:inScheme sett-code:TEI-CL ;
+    skos:notation "VARI"@en ;
+    skos:prefLabel "Visible Atmospherically Resistant Index"@en .
+
+sett-code:WI2 a skos:Concept ;
+    rdfs:comment "The WI2 index belongs to the Landsat IndiceS (LIS) indices. LIS is part of the Traces Environmental Indices (TEI) proposed by the Traces project team."@en ;
+    skos:inScheme sett-code:TEI-CL ;
+    skos:notation "WI2"@en ;
+    skos:prefLabel "Water Index 2"@en .
+
+sett-code:WRI a skos:Concept ;
+    rdfs:comment "The WRI index belongs to the Landsat IndiceS (LIS) indices. LIS is part of the Traces Environmental Indices (TEI) proposed by the Traces project team."@en ;
+    skos:inScheme sett-code:TEI-CL ;
+    skos:notation "WRI"@en ;
+    skos:prefLabel "Water Ratio Index."@en .
+
+sett-code:clc_11 a skos:Concept ;
+    rdfs:comment "The CLC11 index belongs to the Corin Land Cover (CLC) indices. CLC is part of the Traces Environmental Indices (TEI) proposed by the Traces project team."@en ;
+    skos:exactmatch <http://www.w3.org/2015/03/corine#clc11> ;
+    skos:inScheme sett-code:TEI-CL ;
+    skos:notation "CLC11"@en ;
+    skos:prefLabel "Zones urbanisées"@fr .
+
+sett-code:clc_12 a skos:Concept ;
+    rdfs:comment "The CLC12 index belongs to the Corin Land Cover (CLC) indices. CLC is part of the Traces Environmental Indices (TEI) proposed by the Traces project team."@en ;
+    skos:exactmatch <http://www.w3.org/2015/03/corine#clc12> ;
+    skos:inScheme sett-code:TEI-CL ;
+    skos:notation "CLC12"@en ;
+    skos:prefLabel "Zones industrielles ou commerciales et réseaux de communication"@fr .
+
+sett-code:clc_13 a skos:Concept ;
+    rdfs:comment "The CLC13 index belongs to the Corin Land Cover (CLC) indices. CLC is part of the Traces Environmental Indices (TEI) proposed by the Traces project team."@en ;
+    skos:exactmatch <http://www.w3.org/2015/03/corine#clc13> ;
+    skos:inScheme sett-code:TEI-CL ;
+    skos:notation "CLC13"@en ;
+    skos:prefLabel "Mines décharges et chantiers"@fr .
+
+sett-code:clc_14 a skos:Concept ;
+    rdfs:comment "The CLC14 index belongs to the Corin Land Cover (CLC) indices. CLC is part of the Traces Environmental Indices (TEI) proposed by the Traces project team."@en ;
+    skos:exactmatch <http://www.w3.org/2015/03/corine#clc14> ;
+    skos:inScheme sett-code:TEI-CL ;
+    skos:notation "CLC14"@en ;
+    skos:prefLabel "Espaces verts artificialisés non agricoles"@fr .
+
+sett-code:clc_21 a skos:Concept ;
+    rdfs:comment "The CLC21 index belongs to the Corin Land Cover (CLC) indices. CLC is part of the Traces Environmental Indices (TEI) proposed by the Traces project team."@en ;
+    skos:exactmatch <http://www.w3.org/2015/03/corine#clc21> ;
+    skos:inScheme sett-code:TEI-CL ;
+    skos:notation "CLC21"@en ;
+    skos:prefLabel "Terres arables"@fr .
+
+sett-code:clc_22 a skos:Concept ;
+    rdfs:comment "The CLC22 index belongs to the Corin Land Cover (CLC) indices. CLC is part of the Traces Environmental Indices (TEI) proposed by the Traces project team."@en ;
+    skos:exactmatch <http://www.w3.org/2015/03/corine#clc22> ;
+    skos:inScheme sett-code:TEI-CL ;
+    skos:notation "CLC22"@en ;
+    skos:prefLabel "Cultures permanentes"@fr .
+
+sett-code:clc_23 a skos:Concept ;
+    rdfs:comment "The CLC23 index belongs to the Corin Land Cover (CLC) indices. CLC is part of the Traces Environmental Indices (TEI) proposed by the Traces project team."@en ;
+    skos:exactmatch <http://www.w3.org/2015/03/corine#clc23> ;
+    skos:inScheme sett-code:TEI-CL ;
+    skos:notation "CLC23"@en ;
+    skos:prefLabel "Prairies"@fr .
+
+sett-code:clc_24 a skos:Concept ;
+    rdfs:comment "The CLC24 index belongs to the Corin Land Cover (CLC) indices. CLC is part of the Traces Environmental Indices (TEI) proposed by the Traces project team."@en ;
+    skos:exactmatch <http://www.w3.org/2015/03/corine#clc24> ;
+    skos:inScheme sett-code:TEI-CL ;
+    skos:notation "CLC24"@en ;
+    skos:prefLabel "Zones agricoles hétérogènes"@fr .
+
+sett-code:clc_31 a skos:Concept ;
+    rdfs:comment "The CLC31 index belongs to the Corin Land Cover (CLC) indices. CLC is part of the Traces Environmental Indices (TEI) proposed by the Traces project team."@en ;
+    skos:exactmatch <http://www.w3.org/2015/03/corine#clc31> ;
+    skos:inScheme sett-code:TEI-CL ;
+    skos:notation "CLC31"@en ;
+    skos:prefLabel "Forêts"@fr .
+
+sett-code:clc_32 a skos:Concept ;
+    rdfs:comment "The CLC32 index belongs to the Corin Land Cover (CLC) indices. CLC is part of the Traces Environmental Indices (TEI) proposed by the Traces project team."@en ;
+    skos:exactmatch <http://www.w3.org/2015/03/corine#clc32> ;
+    skos:inScheme sett-code:TEI-CL ;
+    skos:notation "CLC32"@en ;
+    skos:prefLabel "Milieux à végétation arbustive et/ou herbacée"@fr .
+
+sett-code:clc_33 a skos:Concept ;
+    rdfs:comment "The CLC33 index belongs to the Corin Land Cover (CLC) indices. CLC is part of the Traces Environmental Indices (TEI) proposed by the Traces project team."@en ;
+    skos:exactmatch <http://www.w3.org/2015/03/corine#clc33> ;
+    skos:inScheme sett-code:TEI-CL ;
+    skos:notation "CLC33"@en ;
+    skos:prefLabel "Espaces ouverts sans ou avec peu de végétation"@fr .
+
+sett-code:clc_41 a skos:Concept ;
+    rdfs:comment "The CLC41 index belongs to the Corin Land Cover (CLC) indices. CLC is part of the Traces Environmental Indices (TEI) proposed by the Traces project team."@en ;
+    skos:exactmatch <http://www.w3.org/2015/03/corine#clc41> ;
+    skos:inScheme sett-code:TEI-CL ;
+    skos:notation "CLC41"@en ;
+    skos:prefLabel "Zones humides intérieures"@fr .
+
+sett-code:clc_42 a skos:Concept ;
+    rdfs:comment "The CLC42 index belongs to the Corin Land Cover (CLC) indices. CLC is part of the Traces Environmental Indices (TEI) proposed by the Traces project team."@en ;
+    skos:exactmatch <http://www.w3.org/2015/03/corine#clc42> ;
+    skos:inScheme sett-code:TEI-CL ;
+    skos:notation "CLC42"@en ;
+    skos:prefLabel "Zones humides côtières"@fr .
+
+sett-code:clc_51 a skos:Concept ;
+    rdfs:comment "The CLC51 index belongs to the Corin Land Cover (CLC) indices. CLC is part of the Traces Environmental Indices (TEI) proposed by the Traces project team."@en ;
+    skos:exactmatch <http://www.w3.org/2015/03/corine#clc51> ;
+    skos:inScheme sett-code:TEI-CL ;
+    skos:notation "CLC51"@en ;
+    skos:prefLabel "Eaux continentales"@fr .
+
+sett-code:clc_52 a skos:Concept ;
+    rdfs:comment "The CLC52 index belongs to the Corin Land Cover (CLC) indices. CLC is part of the Traces Environmental Indices (TEI) proposed by the Traces project team."@en ;
+    skos:exactmatch <http://www.w3.org/2015/03/corine#clc52> ;
+    skos:inScheme sett-code:TEI-CL ;
+    skos:notation "CLC52"@en ;
+    skos:prefLabel "Eaux maritimes"@fr .
+
+sett-code:st a skos:Concept ;
+    rdfs:comment "The ST index belongs to the Landsat Surface Temperature (LST) indices. LST is part of the Traces Environmental Indices (TEI) proposed by the Traces project team."@en ;
+    skos:inScheme sett-code:TEI-CL ;
+    skos:notation "ST"@en ;
+    skos:prefLabel "Surface Temperature"@fr .
+
+sett-code:TEI-CL a skos:ConceptScheme ;
+    rdfs:label "Traces Environmental Indices (TEI) code list."@en ;
+    rdfs:comment "Traces Environmental Indices (TEI) brings together a set of indices proposed by the Traces Project team. The indices are: The Landsat IndiceS (LIS) calculated on Swiss Data Cube (SDC),the Landsat Surface Temperature (LST) calculated on SDC,the Corine Land Cover (CLC) Level 2 surfaces available on SDC,and the Digital Elevation Model (DEM) available on SDC."@en ;
+    skos:hasTopConcept sett-code:AWEIsh,
+        sett-code:EBBI,
+        sett-code:LSWI,
+        sett-code:MBI,
+        sett-code:MSAVI,
+        sett-code:NBSIMS,
+        sett-code:NDBI,
+        sett-code:NDGlaI,
+        sett-code:NDISIb,
+        sett-code:NDSI,
+        sett-code:NDVI,
+        sett-code:NDWI,
+        sett-code:NWI,
+        sett-code:SWI,
+        sett-code:TCB,
+        sett-code:TCG,
+        sett-code:TCW,
+        sett-code:VARI,
+        sett-code:WI2,
+        sett-code:WRI,
+        sett-code:clc_11,
+        sett-code:clc_12,
+        sett-code:clc_13,
+        sett-code:clc_14,
+        sett-code:clc_21,
+        sett-code:clc_22,
+        sett-code:clc_23,
+        sett-code:clc_24,
+        sett-code:clc_31,
+        sett-code:clc_32,
+        sett-code:clc_33,
+        sett-code:clc_41,
+        sett-code:clc_42,
+        sett-code:clc_51,
+        sett-code:clc_52,
+        sett-code:st ;
+    skos:notation "TEI-CL"@en ;
+    skos:note "Traces Environmental Indices (TEI) code list."@en ;
+    skos:prefLabel "Traces Environmental Indices (TEI) code list."@en .
+

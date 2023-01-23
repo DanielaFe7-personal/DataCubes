@@ -1,0 +1,270 @@
+@prefix  qudt:  <http://qudt.org/vocab/unit/>  .
+@prefix  org:  <http://www.w3.org/ns/org#>  .
+@prefix  sett:  <http://setts.org/>  .
+@prefix  xsd:  <http://www.w3.org/2001/XMLSchema#>  .
+@prefix  skos:  <http://www.w3.org/2004/02/skos/core#>  .
+@prefix  rdfs:  <http://www.w3.org/2000/01/rdf-schema#>  .
+@prefix  sett-code:  <http://setts.org/code#>  .
+@prefix  tsn:  <http://purl.org/net/tsn#>  .
+@prefix  qb:  <http://purl.org/linked-data/cube#>  .
+@prefix  dct:  <http://purl.org/dc/terms/>  .
+@prefix  rdf:  <http://www.w3.org/1999/02/22-rdf-syntax-ns#>  .
+@prefix  sdmx-concept:  <http://purl.org/linked-data/sdmx/2009/concept#>  .
+@prefix  sdmx-attribute:  <http://purl.org/linked-data/sdmx/2009/attribute#>  .
+@prefix  foaf:  <http://xmlns.com/foaf/0.1/>  .
+@prefix  sdmx-dimension:  <http://purl.org/linked-data/sdmx/2009/dimension#>  .
+@prefix  dbp:  <https://dbpedia.org/resource/>  .
+@prefix  dc:  <http://purl.org/dc/elements/1.1/>  .
+@prefix  greg:  <http://www.w3.org/ns/time/gregorian>  .
+@prefix  igeo:  <http://rdf.insee.fr/def/geo#>  .
+@prefix  time:  <http://www.w3.org/2006/time#>  .
+@prefix  void:  <http://rdfs.org/ns/void#>  .
+
+sett:Evian-LIS-dataset a qb:DataSet ;
+    dc:coverage igeo:Commune ;
+    dc:description "The Landsat Indice (LIS) indices evolution calculated on Swiss Data Cube (SDC) in Evian case study area. LIS belongs to the list of Traces Environmental Indices (TEI) proposed by the Traces Project team."@en ;
+    dc:issued "2023-01-17"^^xsd:date ;
+    dc:license <http://setts/sparql> ;
+    dc:publisher sett:organization ;
+    dc:subject dbp:Land_cover,
+        dbp:Statistics ;
+    dc:title "Evolution of the LIS-TEI index at the French commune level of Evian."@en ;
+    qb:structure sett:DSD-SwissDataCube ;
+    void:sparqlEndpoint <http://setts/license> ;
+    rdfs:comment "The Landsat Indice (LIS) indices evolution calculated on Swiss Data Cube (SDC) in Evian case study area. LIS belongs to the list of Traces Environmental Indices (TEI) proposed by the Traces Project team."@en .
+
+sett:Season-DJF a time:Interval ;
+    rdfs:label "Season interval. Comprises the months of December (of the previous year), January, and February."@en ;
+    time:hasBeginning greg:December ;
+    time:hasEnd greg:February .
+
+sett:Season-JJA a time:Interval ;
+    rdfs:label "Season interval. Comprises the months of June, July, and August."@en ;
+    time:hasBeginning greg:June ;
+    time:hasEnd greg:August .
+
+sett:Season-MAM a time:Interval ;
+    rdfs:label "Season interval. Comprises the months of March, April, and May."@en ;
+    time:hasBeginning greg:March ;
+    time:hasEnd greg:May .
+
+sett:Season-SON a time:Interval ;
+    rdfs:label "Season interval. Comprises the months of September, October, and November."@en ;
+    time:hasBeginning greg:September ;
+    time:hasEnd greg:November .
+
+sett:DSD-SwissDataCube a qb:DataStructureDefinition ;
+    qb:component [ qb:measure sett:measureDataQuality ],
+        [ qb:dimension sett:dimensionTime ],
+        [ qb:dimension sett:dimensionArea ],
+        [ qb:dimension sett:dimensionSeason ],
+        [ qb:dimension qb:measureType ],
+        [ qb:dimension sett:dimensionTEIndex ],
+        [ qb:attribute sdmx-attribute:unitMeasure ;
+            qb:componentRequired "true"^^xsd:bool ],
+        [ qb:measure sett:measureStatistics ] .
+
+sett:dimensionArea a qb:DimensionProperty,
+        rdf:Property ;
+    rdfs:label "The lowest level of administrative division in France."@en ;
+    qb:concept sdmx-concept:refArea ;
+    rdfs:range igeo:Commune ;
+    rdfs:subPropertyOf sdmx-dimension:refArea .
+
+sett:dimensionSeason a qb:DimensionProperty,
+        rdf:Property ;
+    rdfs:label "Season of the year,e.g., DJF,JJA,etc, at which the measures were collected."@en ;
+    qb:concept sdmx-concept:refPeriod ;
+    rdfs:range time:Interval ;
+    rdfs:subPropertyOf sdmx-dimension:refPeriod .
+
+sett:dimensionTEIndex a qb:DimensionProperty,
+        rdf:Property ;
+    rdfs:label "List of Environmental Indices proposed by the Traces team group."@en ;
+    qb:codeList sett-code:TEI-CL ;
+    rdfs:range skos:Concept .
+
+sett:dimensionTime a qb:DimensionProperty,
+        rdf:Property ;
+    rdfs:label "Data time point at which the measures were collected."@en ;
+    qb:concept sdmx-concept:refPeriod ;
+    rdfs:range xsd:dateTime ;
+    rdfs:subPropertyOf sdmx-dimension:refPeriod .
+
+sett:measureDataQuality a qb:MeasureProperty,
+        rdf:Property ;
+    rdfs:label "Data quality measure of the lowest administrative division in Evian."@en .
+
+sett:measureStatistics a qb:MeasureProperty,
+        rdf:Property ;
+    rdfs:label "Statistic measure of the lowest administrative division in Evian."@en .
+
+sett:organization a org:Organization,
+        foaf:Agent ;
+    rdfs:label "Traces project team."@en .
+
+
+sett:Evian-LIS-dataset-oDataQuality1
+        rdf:type                    qb:Observation ;
+        qb:dataSet                  sett:Evian-LIS-dataset ;
+        sett:dimensionArea          <http://id.insee.fr/geo/commune/74013> ;
+        sett:dimensionTEIndex       sett-code:NDGlaI ;
+        sett:dimensionTime          "1985-01-15"^^xsd:date ;
+        sett:dimensionSeason        sett:Season-DJF ;
+        sett:measureDataQuality     "0.98548199767712"^^xsd:float ;
+        qb:measureType              sett:measureDataQuality ;
+        sdmx-attribute:unitMeasure  qudt:PERCENT .
+
+sett:Evian-LIS-dataset-oMean1
+        rdf:type                    qb:Observation ;
+        qb:dataSet                  sett:Evian-LIS-dataset ;
+        sett:dimensionArea          <http://id.insee.fr/geo/commune/74013> ;
+        sett:dimensionTEIndex       sett-code:NDGlaI ;
+        sett:dimensionTime          "1985-01-15"^^xsd:date ;
+        sett:dimensionSeason        sett:Season-DJF ;
+        sett:measureStatistics      "0.00882552206589186"^^xsd:float ;
+        qb:measureType              sett:measureStatistics ;
+        sdmx-attribute:unitMeasure  <https://dbpedia.org/resource/Arithmetic_mean> .
+
+sett:Evian-LIS-dataset-oStd1
+        rdf:type                    qb:Observation ;
+        qb:dataSet                  sett:Evian-LIS-dataset ;
+        sett:dimensionArea          <http://id.insee.fr/geo/commune/74013> ;
+        sett:dimensionTEIndex       sett-code:NDGlaI ;
+        sett:dimensionTime          "1985-01-15"^^xsd:date ;
+        sett:dimensionSeason        sett:Season-DJF ;
+        sett:measureStatistics      "0.0187482678946478"^^xsd:float ;
+        qb:measureType              sett:measureStatistics ;
+        sdmx-attribute:unitMeasure  <https://dbpedia.org/resource/Standard_deviation> .
+
+sett:Evian-LIS-dataset-oDataQuality2
+        rdf:type                    qb:Observation ;
+        qb:dataSet                  sett:Evian-LIS-dataset ;
+        sett:dimensionArea          <http://id.insee.fr/geo/commune/74013> ;
+        sett:dimensionTEIndex       sett-code:NDGlaI ;
+        sett:dimensionTime          "1985-07-15"^^xsd:date ;
+        sett:dimensionSeason        sett:Season-JJA ;
+        sett:measureDataQuality     "1"^^xsd:float ;
+        qb:measureType              sett:measureDataQuality ;
+        sdmx-attribute:unitMeasure  qudt:PERCENT .
+
+sett:Evian-LIS-dataset-oMean2
+        rdf:type                    qb:Observation ;
+        qb:dataSet                  sett:Evian-LIS-dataset ;
+        sett:dimensionArea          <http://id.insee.fr/geo/commune/74013> ;
+        sett:dimensionTEIndex       sett-code:NDGlaI ;
+        sett:dimensionTime          "1985-07-15"^^xsd:date ;
+        sett:dimensionSeason        sett:Season-JJA ;
+        sett:measureStatistics      "0.0654082642523792"^^xsd:float ;
+        qb:measureType              sett:measureStatistics ;
+        sdmx-attribute:unitMeasure  <https://dbpedia.org/resource/Arithmetic_mean> .
+
+sett:Evian-LIS-dataset-oStd2
+        rdf:type                    qb:Observation ;
+        qb:dataSet                  sett:Evian-LIS-dataset ;
+        sett:dimensionArea          <http://id.insee.fr/geo/commune/74013> ;
+        sett:dimensionTEIndex       sett-code:NDGlaI ;
+        sett:dimensionTime          "1985-07-15"^^xsd:date ;
+        sett:dimensionSeason        sett:Season-JJA ;
+        sett:measureStatistics      "0.0583817724931618"^^xsd:float ;
+        qb:measureType              sett:measureStatistics ;
+        sdmx-attribute:unitMeasure  <https://dbpedia.org/resource/Standard_deviation> .
+
+sett:Evian-LIS-dataset-oDataQuality3
+        rdf:type                    qb:Observation ;
+        qb:dataSet                  sett:Evian-LIS-dataset ;
+        sett:dimensionArea          <http://id.insee.fr/geo/commune/74013> ;
+        sett:dimensionTEIndex       sett-code:NDGlaI ;
+        sett:dimensionTime          "1985-04-15"^^xsd:date ;
+        sett:dimensionSeason        sett:Season-MAM ;
+        sett:measureDataQuality     "1"^^xsd:float ;
+        qb:measureType              sett:measureDataQuality ;
+        sdmx-attribute:unitMeasure  qudt:PERCENT .
+
+sett:Evian-LIS-dataset-oMean3
+        rdf:type                    qb:Observation ;
+        qb:dataSet                  sett:Evian-LIS-dataset ;
+        sett:dimensionArea          <http://id.insee.fr/geo/commune/74013> ;
+        sett:dimensionTEIndex       sett-code:NDGlaI ;
+        sett:dimensionTime          "1985-04-15"^^xsd:date ;
+        sett:dimensionSeason        sett:Season-MAM ;
+        sett:measureStatistics      "0.0342224288254224"^^xsd:float ;
+        qb:measureType              sett:measureStatistics ;
+        sdmx-attribute:unitMeasure  <https://dbpedia.org/resource/Arithmetic_mean> .
+
+sett:Evian-LIS-dataset-oStd3
+        rdf:type                    qb:Observation ;
+        qb:dataSet                  sett:Evian-LIS-dataset ;
+        sett:dimensionArea          <http://id.insee.fr/geo/commune/74013> ;
+        sett:dimensionTEIndex       sett-code:NDGlaI ;
+        sett:dimensionTime          "1985-04-15"^^xsd:date ;
+        sett:dimensionSeason        sett:Season-MAM ;
+        sett:measureStatistics      "0.0314386442766193"^^xsd:float ;
+        qb:measureType              sett:measureStatistics ;
+        sdmx-attribute:unitMeasure  <https://dbpedia.org/resource/Standard_deviation> .
+
+sett:Evian-LIS-dataset-oDataQuality4
+        rdf:type                    qb:Observation ;
+        qb:dataSet                  sett:Evian-LIS-dataset ;
+        sett:dimensionArea          <http://id.insee.fr/geo/commune/74013> ;
+        sett:dimensionTEIndex       sett-code:NDGlaI ;
+        sett:dimensionTime          "1985-10-15"^^xsd:date ;
+        sett:dimensionSeason        sett:Season-SON ;
+        sett:measureDataQuality     "0.169570267131243"^^xsd:float ;
+        qb:measureType              sett:measureDataQuality ;
+        sdmx-attribute:unitMeasure  qudt:PERCENT .
+
+sett:Evian-LIS-dataset-oMean4
+        rdf:type                    qb:Observation ;
+        qb:dataSet                  sett:Evian-LIS-dataset ;
+        sett:dimensionArea          <http://id.insee.fr/geo/commune/74013> ;
+        sett:dimensionTEIndex       sett-code:NDGlaI ;
+        sett:dimensionTime          "1985-10-15"^^xsd:date ;
+        sett:dimensionSeason        sett:Season-SON ;
+        sett:measureStatistics      "0.0409474041308329"^^xsd:float ;
+        qb:measureType              sett:measureStatistics ;
+        sdmx-attribute:unitMeasure  <https://dbpedia.org/resource/Arithmetic_mean> .
+
+sett:Evian-LIS-dataset-oStd4
+        rdf:type                    qb:Observation ;
+        qb:dataSet                  sett:Evian-LIS-dataset ;
+        sett:dimensionArea          <http://id.insee.fr/geo/commune/74013> ;
+        sett:dimensionTEIndex       sett-code:NDGlaI ;
+        sett:dimensionTime          "1985-10-15"^^xsd:date ;
+        sett:dimensionSeason        sett:Season-SON ;
+        sett:measureStatistics      "0.0394542249074758"^^xsd:float ;
+        qb:measureType              sett:measureStatistics ;
+        sdmx-attribute:unitMeasure  <https://dbpedia.org/resource/Standard_deviation> .
+
+sett:Evian-LIS-dataset-oDataQuality5
+        rdf:type                    qb:Observation ;
+        qb:dataSet                  sett:Evian-LIS-dataset ;
+        sett:dimensionArea          <http://id.insee.fr/geo/commune/74030> ;
+        sett:dimensionTEIndex       sett-code:NDGlaI ;
+        sett:dimensionTime          "1985-01-15"^^xsd:date ;
+        sett:dimensionSeason        sett:Season-DJF ;
+        sett:measureDataQuality     "0.898460721868365"^^xsd:float ;
+        qb:measureType              sett:measureDataQuality ;
+        sdmx-attribute:unitMeasure  qudt:PERCENT .
+
+sett:Evian-LIS-dataset-oMean5
+        rdf:type                    qb:Observation ;
+        qb:dataSet                  sett:Evian-LIS-dataset ;
+        sett:dimensionArea          <http://id.insee.fr/geo/commune/74030> ;
+        sett:dimensionTEIndex       sett-code:NDGlaI ;
+        sett:dimensionTime          "1985-01-15"^^xsd:date ;
+        sett:dimensionSeason        sett:Season-DJF ;
+        sett:measureStatistics      "0.0474622518469842"^^xsd:float ;
+        qb:measureType              sett:measureStatistics ;
+        sdmx-attribute:unitMeasure  <https://dbpedia.org/resource/Arithmetic_mean> .
+
+sett:Evian-LIS-dataset-oStd5
+        rdf:type                    qb:Observation ;
+        qb:dataSet                  sett:Evian-LIS-dataset ;
+        sett:dimensionArea          <http://id.insee.fr/geo/commune/74030> ;
+        sett:dimensionTEIndex       sett-code:NDGlaI ;
+        sett:dimensionTime          "1985-01-15"^^xsd:date ;
+        sett:dimensionSeason        sett:Season-DJF ;
+        sett:measureStatistics      "0.0632531451873759"^^xsd:float ;
+        qb:measureType              sett:measureStatistics ;
+        sdmx-attribute:unitMeasure  <https://dbpedia.org/resource/Standard_deviation> .
